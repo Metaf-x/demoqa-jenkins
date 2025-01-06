@@ -17,7 +17,7 @@ public class RegistrationTest extends TestBase {
 
     @Test
     @DisplayName("Заполнение валидными данными всех полей")
-    void fillAllFieldsWithValidDataTest() {
+    void successfulAllFieldsWithValidDataTest() {
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -68,7 +68,7 @@ public class RegistrationTest extends TestBase {
 
     @Test
     @DisplayName("Заполнение валидными данными обязательных полей")
-    void fillRequiredFieldsWithValidDataTest() {
+    void successfulRequiredFieldsWithValidDataTest() {
         step("Открыть страницу с формой регистрации", () -> {
             registrationPage.openPage()
                     .removeBlockingElements();
@@ -102,7 +102,7 @@ public class RegistrationTest extends TestBase {
 
     @Test
     @DisplayName("Заполнение обязательных полей формы с невалидным номером телефона (9 символов)")
-    void fillRequiredFieldsWithShortPhoneNumberNegativeTest() {
+    void negativeFillRequiredFieldsWithShortPhoneNumberTest() {
         step("Открыть страницу с формой регистрации", () -> {
             registrationPage.openPage()
                     .removeBlockingElements();
