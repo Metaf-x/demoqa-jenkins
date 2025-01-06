@@ -10,6 +10,6 @@ public class PageUtils {
         executeJavaScript("$('footer').remove()");
     }
     public void removeBottomBanner() {
-        executeJavaScript("$(\"[id*='google_ads_iframe'\").remove()");
+        executeJavaScript("$(\\'[id*='google_ads_iframe'\\').remove()");
     }
 }
