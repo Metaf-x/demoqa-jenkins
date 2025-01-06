@@ -11,6 +11,7 @@ public class RandomBirthday {
     private final int minAge;
     private final int maxAge;
     private final Faker faker;
+    private final LocalDate birthDate;
  
     public RandomBirthday(int minAge, int maxAge) {
         if (minAge > maxAge) {
@@ -19,6 +20,7 @@ public class RandomBirthday {
         this.minAge = minAge;
         this.maxAge = maxAge;
         this.faker = new Faker();
+        this.birthDate = this.getDate();
     }
 
     private LocalDate getDate() {
@@ -26,14 +28,14 @@ public class RandomBirthday {
     }
 
     public String getFormattedYear() {
-        return getDate().format(DateTimeFormatter.ofPattern("yyyy", Locale.ENGLISH));
+        return birthDate.format(DateTimeFormatter.ofPattern("yyyy", Locale.ENGLISH));
     }
 
     public String getFormattedMonth() {
-        return getDate().format(DateTimeFormatter.ofPattern("MMMM", Locale.ENGLISH));
+        return birthDate.format(DateTimeFormatter.ofPattern("MMMM", Locale.ENGLISH));
     }
 
     public String getFormattedDay() {
-        return getDate().format(DateTimeFormatter.ofPattern("dd", Locale.ENGLISH));
+        return birthDate.format(DateTimeFormatter.ofPattern("dd", Locale.ENGLISH));
     }
 }
