@@ -38,6 +38,7 @@ public class RegistrationRemoteTest {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 
     RegistrationPage registrationPage = new RegistrationPage();
@@ -47,8 +48,6 @@ public class RegistrationRemoteTest {
     @Tag("REGRESS")
     @DisplayName("Заполнение валидными данными всех полей")
     void successfulAllFieldsWithValidDataTest() {
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открыть страницу с формой регистрации", () -> {
             registrationPage.openPage()
@@ -99,7 +98,6 @@ public class RegistrationRemoteTest {
     @Tag("REGRESS")
     @DisplayName("Заполнение валидными данными обязательных полей")
     void successfulRequiredFieldsWithValidDataTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открыть страницу с формой регистрации", () -> {
             registrationPage.openPage()
@@ -136,7 +134,6 @@ public class RegistrationRemoteTest {
     @Tag("REGRESS")
     @DisplayName("Заполнение обязательных полей формы с невалидным номером телефона (9 символов)")
     void negativeFillRequiredFieldsWithShortPhoneNumberTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открыть страницу с формой регистрации", () -> {
             registrationPage.openPage()
