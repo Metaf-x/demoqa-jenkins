@@ -39,6 +39,7 @@ public class RegistrationPage {
     public RegistrationPage removeBlockingElements() {
         pageUtils.removeAds();
         pageUtils.removeFooter();
+        pageUtils.removeBottomBanner();
         return this;
     }
 
