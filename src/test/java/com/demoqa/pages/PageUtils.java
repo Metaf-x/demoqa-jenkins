@@ -9,7 +9,4 @@ public class PageUtils {
     public void removeFooter() {
         executeJavaScript("$('footer').remove()");
     }
-    public void removeBottomBanner() {
-        executeJavaScript("$('[data-google-query-id]').remove()");
-    }
 }

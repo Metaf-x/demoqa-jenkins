@@ -39,7 +39,6 @@ public class RegistrationPage {
     public RegistrationPage removeBlockingElements() {
         pageUtils.removeAds();
         pageUtils.removeFooter();
-        pageUtils.removeBottomBanner();
         return this;
     }
 
@@ -91,6 +90,11 @@ public class RegistrationPage {
 
     public RegistrationPage setAddress(String value) {
         currentAddress.setValue(value);
+        return this;
+    }
+
+    public RegistrationPage stateFieldAlignTop() {
+        stateField.scrollIntoView(true);
         return this;
     }
 

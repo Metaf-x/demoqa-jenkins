@@ -64,6 +64,7 @@ public class RegistrationRemoteTest {
                     .setSubjects(data.subjects)
                     .setHobbies(data.hobbies)
                     .setImagePath(data.image)
+                    .stateFieldAlignTop()
                     .setAddress(data.address)
                     .setState(data.state)
                     .setCity(data.city);
