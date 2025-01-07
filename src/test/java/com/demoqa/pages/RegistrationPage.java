@@ -93,6 +93,11 @@ public class RegistrationPage {
         return this;
     }
 
+    public RegistrationPage stateFieldAlignTop() {
+        stateField.scrollIntoView(true);
+        return this;
+    }
+
     public RegistrationPage setState(String value) {
         stateField.click();
         stateDropdown.$(byText(value)).click();

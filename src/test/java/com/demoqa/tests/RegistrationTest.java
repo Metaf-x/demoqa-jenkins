@@ -5,6 +5,7 @@ import com.demoqa.pages.RegistrationPage;
 import com.demoqa.utils.RegistrationData;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -16,6 +17,7 @@ public class RegistrationTest extends TestBase {
     RegistrationData data = new RegistrationData();
 
     @Test
+    @Tag("REGRESS")
     @DisplayName("Заполнение валидными данными всех полей")
     void successfulAllFieldsWithValidDataTest() {
 
@@ -37,6 +39,7 @@ public class RegistrationTest extends TestBase {
                     .setHobbies(data.hobbies)
                     .setImagePath(data.image)
                     .setAddress(data.address)
+                    .stateFieldAlignTop()
                     .setState(data.state)
                     .setCity(data.city);
         });
@@ -67,6 +70,7 @@ public class RegistrationTest extends TestBase {
     }
 
     @Test
+    @Tag("REGRESS")
     @DisplayName("Заполнение валидными данными обязательных полей")
     void successfulRequiredFieldsWithValidDataTest() {
         step("Открыть страницу с формой регистрации", () -> {
@@ -101,6 +105,7 @@ public class RegistrationTest extends TestBase {
     }
 
     @Test
+    @Tag("REGRESS")
     @DisplayName("Заполнение обязательных полей формы с невалидным номером телефона (9 символов)")
     void negativeFillRequiredFieldsWithShortPhoneNumberTest() {
         step("Открыть страницу с формой регистрации", () -> {
