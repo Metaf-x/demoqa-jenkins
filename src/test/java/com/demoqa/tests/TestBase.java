@@ -30,7 +30,6 @@ public class TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
 
-
     }
 
     @BeforeEach

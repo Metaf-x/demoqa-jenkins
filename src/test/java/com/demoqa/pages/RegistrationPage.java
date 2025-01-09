@@ -69,6 +69,7 @@ public class RegistrationPage {
 
     public RegistrationPage setDateOfBirth(String day, String month, String year) {
         dateOfBirthInput.click();
+        calendarComponent.scrollToPopup();
         calendarComponent.setDate(day, month, year);
         return this;
     }
@@ -100,12 +101,14 @@ public class RegistrationPage {
 
     public RegistrationPage setState(String value) {
         stateField.click();
+        stateDropdown.scrollIntoView(true);
         stateDropdown.$(byText(value)).click();
         return this;
     }
 
     public RegistrationPage setCity(String value) {
         cityField.click();
+        cityDropdown.scrollIntoView(true);
         cityDropdown.$(byText(value)).click();
         return this;
     }

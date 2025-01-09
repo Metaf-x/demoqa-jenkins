@@ -43,13 +43,14 @@ public class RegistrationTest extends TestBase {
                     .setHobbies(data.hobbies)
                     .setImagePath(data.image)
                     .setAddress(data.address)
-                    .stateFieldAlignTop()
                     .setState(data.state)
                     .setCity(data.city);
         });
 
         step("Отправить форму", () -> {
-            registrationPage.submit();
+            registrationPage
+                    .removeBlockingElements()
+                    .submit();
         });
 
         step("Проверить, что форма была отправлена", () -> {
@@ -91,7 +92,9 @@ public class RegistrationTest extends TestBase {
         });
 
         step("Отправить форму", () -> {
-            registrationPage.submit();
+            registrationPage
+                    .removeBlockingElements()
+                    .submit();
         });
 
         step("Проверить, что форма была отправлена", () -> {
@@ -124,7 +127,9 @@ public class RegistrationTest extends TestBase {
         });
 
         step("Отправить форму", () -> {
-            registrationPage.submit();
+            registrationPage
+                    .removeBlockingElements()
+                    .submit();
         });
         step("Проверить, что сообщение с уведомлением об успешной отправке не появилось", () -> {
             registrationPage
