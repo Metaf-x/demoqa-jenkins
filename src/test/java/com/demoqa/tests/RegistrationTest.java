@@ -6,6 +6,7 @@ import com.demoqa.utils.RegistrationData;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -17,7 +18,10 @@ public class RegistrationTest extends TestBase {
     RegistrationData data = new RegistrationData();
 
     @Test
-    @Tag("REGRESS")
+    @Tags({
+            @Tag("SMOKE"),
+            @Tag("REGRESS")
+    })
     @DisplayName("Заполнение валидными данными всех полей")
     void successfulAllFieldsWithValidDataTest() {
 
