@@ -60,9 +60,3 @@ task regress_test(type: Test) {
         includeTags("REGRESS")
     }
 }
-
-task property_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("property")
-    }
-}
