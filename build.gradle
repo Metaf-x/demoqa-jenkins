@@ -38,6 +38,7 @@ dependencies {
 }
 
 tasks.withType(Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform()
 
     testLogging {
@@ -57,5 +58,11 @@ task smoke_test(type: Test) {
 task regress_test(type: Test) {
     useJUnitPlatform {
         includeTags("REGRESS")
+    }
+}
+
+task property_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("property")
     }
 }
