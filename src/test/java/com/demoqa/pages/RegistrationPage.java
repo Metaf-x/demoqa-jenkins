@@ -100,6 +100,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setState(String value) {
+        pageUtils.removeAds();
         stateField.click();
         stateDropdown.scrollIntoView(true);
         stateDropdown.$(byText(value)).click();
@@ -107,6 +108,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setCity(String value) {
+        pageUtils.removeAds();
         cityField.click();
         cityDropdown.scrollIntoView(true);
         cityDropdown.$(byText(value)).click();
@@ -114,6 +116,7 @@ public class RegistrationPage {
     }
 
     public void submit() {
+        pageUtils.removeAds();
         submitBtn.click();
     }
 

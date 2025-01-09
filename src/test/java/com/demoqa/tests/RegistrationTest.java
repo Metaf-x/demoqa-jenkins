@@ -49,7 +49,6 @@ public class RegistrationTest extends TestBase {
 
         step("Отправить форму", () -> {
             registrationPage
-                    .removeBlockingElements()
                     .submit();
         });
 
@@ -93,7 +92,6 @@ public class RegistrationTest extends TestBase {
 
         step("Отправить форму", () -> {
             registrationPage
-                    .removeBlockingElements()
                     .submit();
         });
 
@@ -128,7 +126,6 @@ public class RegistrationTest extends TestBase {
 
         step("Отправить форму", () -> {
             registrationPage
-                    .removeBlockingElements()
                     .submit();
         });
         step("Проверить, что сообщение с уведомлением об успешной отправке не появилось", () -> {
