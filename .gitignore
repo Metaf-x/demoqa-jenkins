@@ -15,3 +15,5 @@ out/
 
 ### Logs ###
 *.log
+/notifications/config.json
+/notifications/draft.txt
